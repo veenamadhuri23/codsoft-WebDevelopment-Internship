@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Veena's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        header {
+            background-color: #FFE5F7;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        header h1 {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .about{
+            background-color: #DCD4AF;
+            margin: 20px 0;
+        }
+
+        .projects{
+            background-color: #BDD4E7;
+            margin: 20px 0;
+        }
+
+        .contact {
+            background-color: #AAB9CF;
+            margin: 20px 0;
+        }
+
+        .footer {
+            background-color: #212227;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer img {
+            width: 25px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        a {
+            color: BLUE;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="C:\Users\Admin\Desktop\Madhu Internship\Level 1\logo.jpg" alt="Logo">
+        <h1>Veena Madhuri Kota</h1>
+    </header>
+
+    <div class="section about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Veena Madhuri, a passionate and dedicated web developer with a strong foundation in HTML, CSS, and JavaScript. During my academic journey, I working on various projects that honed my skills in front-end and back-end development. I am working at building responsive websites that provide an optimal user experience across all devices. I'm also familiar with frameworks and libraries such as React, Node.js, and Bootstrap, which I have used to enhance my projects.
+
+I am always eager to learn and adapt to new technologies and trends in the web development world. My goal is to contribute to innovative projects and collaborate with like-minded professionals to create impactful digital solutions.</p>
+    </div>
+
+    <div class="section projects">
+        <h2>Projects</h2>
+        <p>Here are some of the projects I've working on:</p>
+        <ul>
+            <li>Project 1 -For my first web development project, I created a personal portfolio website to showcase my skills, projects, and achievements. The website is built using HTML, CSS, and JavaScript, featuring a clean and responsive design.
+Key Features:
+Responsive Design: Ensures optimal viewing on various devices, from desktops to mobile phones.
+Interactive Elements: Includes a dynamic navigation bar, smooth scrolling, and animated transitions to enhance user experience.
+Project Showcase: A dedicated section to display my projects with descriptions, technologies used, and links to live demos and GitHub repositories.
+Contact Form: A functional contact form that allows visitors to reach out to me directly from the website.
+This project was a significant milestone in my web development journey, helping me understand the fundamentals of front-end development and the importance of user experience.
+
+</li>
+        </ul>
+    </div>
+
+    <div class="section contact">
+        <h2>Contact Me</h2>
+        <p>You can reach me at my email: veenamadhurikota.05@gmail.com</p>
+        <p>Phone no: +91 0000000000</p>
+           </div>
+
+    <div class="footer">
+        <p>&copy; 2024 My Portfolio</p>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><img src="C:\Users\Admin\Desktop\Madhu Internship\Level 1\Li.png" alt="LinkedIn"></a>
+        <a href="https://wa.me/yourwhatsappnumber" target="_blank"><img src="C:\Users\Admin\Desktop\Madhu Internship\Level 1\WA.png" alt="WhatsApp"></a>
+    </div>
+</body>
+
+</html>

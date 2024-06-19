@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+        .calculator {
+            background-color: #03045e;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #display {
+            font-size: 2em;
+            background-color: #0077b6;
+            color: #fff;
+            text-align: right;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            height: 50px;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .btn {
+            padding: 20px;
+            font-size: 1.5em;
+            background-color: #00b4d8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn.operator {
+            background-color: #ff9f1c;
+            color: #fff;
+        }
+        .btn.equal {
+            grid-column: span 2;
+            background-color: #ffbf69;
+            color: #fff;
+        }
+        .btn.clear {
+            background-color: #caf0f8;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div id="display">0</div>
+        <div class="buttons">
+            <button class="btn" onclick="appendNumber(7)">7</button>
+            <button class="btn" onclick="appendNumber(8)">8</button>
+            <button class="btn" onclick="appendNumber(9)">9</button>
+            <button class="btn operator" onclick="chooseOperator('/')">/</button>
+            <button class="btn" onclick="appendNumber(4)">4</button>
+            <button class="btn" onclick="appendNumber(5)">5</button>
+            <button class="btn" onclick="appendNumber(6)">6</button>
+            <button class="btn operator" onclick="chooseOperator('*')">*</button>
+            <button class="btn" onclick="appendNumber(1)">1</button>
+            <button class="btn" onclick="appendNumber(2)">2</button>
+            <button class="btn" onclick="appendNumber(3)">3</button>
+            <button class="btn operator" onclick="chooseOperator('-')">-</button>
+            <button class="btn" onclick="appendNumber(0)">0</button>
+            <button class="btn" onclick="appendNumber('.')">.</button>
+            <button class="btn clear" onclick="clearDisplay()">C</button>
+            <button class="btn operator" onclick="chooseOperator('+')">+</button>
+            <button class="btn equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById('display');
+        let currentInput = '';
+        let operator = '';
+        let firstOperand = null;
+
+        function appendNumber(number) {
+            if (currentInput.includes('.') && number === '.') return;
+            currentInput += number;
+            display.textContent = currentInput;
+        }
+
+        function chooseOperator(op) {
+            if (currentInput === '') return;
+            if (firstOperand === null) {
+                firstOperand = parseFloat(currentInput);
+            } else {
+                firstOperand = calculateResult();
+            }
+            operator = op;
+            currentInput = '';
+            display.textContent = operator;
+        }
+
+        function clearDisplay() {
+            currentInput = '';
+            operator = '';
+            firstOperand = null;
+            display.textContent = '0';
+        }
+
+        function calculate() {
+            if (currentInput === '' || firstOperand === null || operator === '') return;
+            let result = calculateResult();
+            display.textContent = result;
+            currentInput = result.toString();
+            operator = '';
+            firstOperand = null;
+        }
+
+        function calculateResult() {
+            let secondOperand = parseFloat(currentInput);
+            switch (operator) {
+                case '+':
+                    return firstOperand + secondOperand;
+                case '-':
+                    return firstOperand - secondOperand;
+                case '*':
+                    return firstOperand * secondOperand;
+                case '/':
+                    return firstOperand / secondOperand;
+                default:
+                    return 0;
+            }
+        }
+    </script>
+</body>
+</html>

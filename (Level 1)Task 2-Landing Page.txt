@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #adc178;
+        }
+
+        nav {
+            background-color: #52796f;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav .container h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav .container ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav .container ul li {
+            margin-left: 20px;
+        }
+
+        nav .container ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .content .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .content .grid .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .content .grid .card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .content .grid .card h3 {
+            margin: 20px 0 10px;
+            font-size: 22px;
+        }
+
+        .content .grid .card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .content .grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content .grid .card {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <h1>Landing Page</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <h1>Welcome to Veena's Landing Page</h1>
+        <p>Your one-stop solution for all your needs</p>
+    </header>
+
+    <div class="content" id="services">
+<h2>About Us</h2>
+        <p>We are a dedicated team of professionals with a passion for helping businesses succeed in the digital world. Our mission is to provide innovative solutions tailored to meet the unique needs of our clients. With years of experience in the industry, we offer a wide range of services including web development, SEO optimization, and digital marketing.</p>
+        <p>Our team consists of skilled developers, creative designers, and strategic marketers who work together to deliver exceptional results. We believe in the power of collaboration and strive to build long-lasting relationships with our clients. Our goal is to help you achieve your business objectives and take your online presence to the next level.</p>
+        <p>At My Landing Page, we are committed to excellence and continuously seek to improve our services. We stay updated with the latest trends and technologies to ensure that we provide cutting-edge solutions. Thank you for choosing us as your trusted partner. We look forward to working with you and helping you achieve success.</p>
+    </div>.</p>
+    </div>
+        <div class="content" id="about">
+        <h2>Our Services</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="C:\Users\Admin\Desktop\Madhu Internship\Level 1\WA.png" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>We provide top-notch web development services to help you build robust and scalable websites.</p>
+            </div>
+            <div class="card">
+                <img src="C:\Users\Admin\Desktop\Madhu Internship\Level 1\SEO.png" alt="SEO Optimization">
+                <h3>SEO Optimization</h3>
+                <p>SEO stands for Search Engine Optimization.It's a set of practices that aim to improve a website's position in search engine results pages (SERPs)..</p>
+            </div>
+            <div class="card">
+                <img src="C:\Users\Admin\Desktop\Madhu Internship\Level 1\DM.png" alt="Digital Marketing">
+                <h3>Digital Marketing</h3>
+                <p>The promotion of brands to connect with potential customers using the internet and other forms of digital communication..</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2024 Veena's Landing Page. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
